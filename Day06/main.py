@@ -13,7 +13,6 @@ def findGuard():
 		for x in range(len(map[0])):
 			if map[x][y][0] == '^':
 				guard = (x, y)
-				map[x][y] = ['X', ["up"]]
 				return
 	
 	print("guard not found")
@@ -167,8 +166,8 @@ def guardPatrol():
 	return
 
 def main():
-	# filename = "inputDay06"
-	filename = "test06"
+	filename = "inputDay06"
+	# filename = "test06"
 
 	'''
 	Part 2:
@@ -195,21 +194,18 @@ def main():
 	# Calculate the maximum width of a cell
 	max_width = max(len(str(cell)) for row in map for cell in row)
 
-	for row in map:
-		for cell in row:
-			# Format the cell string
-			cell_str = f"{cell[0]} ({', '.join(cell[1])})"
-			print(cell_str.ljust(max_width), end=' ')
-		print()
+	# for row in map:
+	# 	for cell in row:
+	# 		# Format the cell string
+	# 		cell_str = f"{cell[0]} ({', '.join(cell[1])})"
+	# 		print(cell_str.ljust(max_width), end=' ')
+	# 	print()
 	
-	global travelDistance
-	# print(f"{travelDistance=}")
+	print(f"{travelDistance=}")
 	print(f"{len(loopingObstacles)=}")
 	print(f"{loopingObstacles=}")
 
 	return
-
-# ['X', ['down', 'left']]
 
 if __name__ == "__main__":
 	main()
