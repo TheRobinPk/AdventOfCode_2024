@@ -14,3 +14,4 @@ I decided to use Python
 | 6 | ⭐ |
 | 7 | |
 | 8 | |
+| 9 | ⭐ |
